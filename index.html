@@ -1,0 +1,1179 @@
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trang chủ </title>
+  <style>
+    body {margin:0; font-family: 'Segoe UI', sans-serif; background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364); color:#fff;}
+    header {background:linear-gradient(90deg, #0f0c29, #302b63, #24243e); padding:20px; text-align:center; box-shadow:0 0 20px #0ff;}
+    header h1 {margin:0; font-size:2em; text-shadow:0 0 10px #0ff;}
+    nav {display:flex; justify-content:center; background:#111; padding:10px; box-shadow:0 0 10px #0ff;}
+    nav a {margin:0 15px; text-decoration:none; color:#0ff; font-weight:bold; padding:8px 15px; border-radius:8px; transition:0.3s;}
+    nav a:hover {background:#0ff; color:#000; box-shadow:0 0 15px #0ff;}
+    .tab-content {max-width:900px; margin:auto; padding:20px;}
+    .tab-pane {display:none; background:rgba(0,0,0,0.6); padding:20px; border-radius:12px; box-shadow:0 0 20px rgba(0,255,255,0.3); animation: fadeIn 0.5s ease;}
+    .tab-pane.active {display:block;}
+    .btn-download {display:inline-flex; align-items:center; gap:10px; background:#0f0; color:#000; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 0 15px #0f0; transition:0.3s;}
+    .btn-download:hover {transform:scale(1.05); box-shadow:0 0 25px #0f0;}
+    .game-card {display:flex; align-items:center; gap:15px; background:rgba(0,0,0,0.8); padding:15px; border-radius:12px; box-shadow:0 0 10px #0ff; margin-bottom:15px;}
+    .game-card img {width:80px; height:80px; border-radius:16px; object-fit:cover; box-shadow:0 0 10px #0ff;}
+    .updates .update {padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.2);}
+    .updates .update:last-child {border-bottom:none;}
+    iframe {width:100%; height:400px; border:none; border-radius:8px; box-shadow:0 0 10px #0ff;}
+    footer {text-align:center; padding:20px; margin-top:30px; font-size:0.9em; color:#aaa;}
+    @keyframes fadeIn {from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);}}
+  
+.script-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #0ff;
+}
+.script-box textarea {
+  width: 100%;
+  height: 70px;
+  background: #111;
+  color: #0ff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  resize: none;
+  font-family: monospace;
+}
+.script-box button {
+  margin-top: 8px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.script-box button:hover {
+  background: #00cccc;
+  box-shadow: 0 0 15px #0ff;
+}
+
+  </style>
+  <script>
+    function openTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+    window.onload = () => {openTab('download');};
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Cloud và Hack Roblox</h1>
+    <p>Ở Đây bạn có thể tải Cloud,Hack Roblox của tôi tại đây</p>
+  </header>
+
+  
+<!-- Floating Menu Button -->
+<nav class="menu">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <div class="menu-links" id="menuLinks">
+    <a href="#" onclick="openTab('download');toggleMenu()">Tải App</a>
+    <a href="#" onclick="openTab('hack');toggleMenu()">Hack Roblox🔥</a>
+    <a href="#" onclick="openTab('updates');toggleMenu()">Cập nhật</a>
+    <a href="#" onclick="openTab('thongbao');toggleMenu()">Thông báo🔥</a>
+    <a href="#" onclick="openTab('note');toggleMenu()">Gửi văn bản</a>
+    <a href="#" onclick="openTab('howtousevpn');toggleMenu()">Cách dùng VPN</a>
+    <a href="#" onclick="openTab('script');toggleMenu()">Script</a>
+  </div>
+</nav>
+
+<style>
+.menu {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.menu-toggle {
+  background:#0ff;
+  color:#000;
+  border:none;
+  width:50px;
+  height:50px;
+  font-size:1.5em;
+  font-weight:bold;
+  border-radius:50%;
+  cursor:pointer;
+  box-shadow:0 0 10px #0ff;
+}
+.menu-links {
+  display:none;
+  flex-direction:column;
+  gap:10px;
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background:rgba(0,0,0,0.8);
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 0 10px #0ff;
+}
+.menu-links a {
+  text-decoration:none;
+  color:#0ff;
+  font-weight:bold;
+  background:rgba(0,0,0,0.5);
+  padding:8px 15px;
+  border-radius:8px;
+  transition:0.3s;
+}
+.menu-links a:hover {
+  background:#0ff;
+  color:#000;
+}
+
+.script-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #0ff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #0ff;
+}
+.script-box textarea {
+  width: 100%;
+  height: 70px;
+  background: #111;
+  color: #0ff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  resize: none;
+  font-family: monospace;
+}
+.script-box button {
+  margin-top: 8px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.script-box button:hover {
+  background: #00cccc;
+  box-shadow: 0 0 15px #0ff;
+}
+
+.icon-script {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+  </style>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById('menuLinks');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
+
+  <div class="tab-content">
+    <div id="download" class="tab-pane">
+      <h2>Tải Ứng Dụng</h2>
+      <div class="game-card">
+        <img src="https://sf-static.upanhlaylink.com/img/image_202512121a8babd81553afac124a8e1e137107f1.jpg" alt="App Icon">
+        <div>
+          <h3>Ara Cloud Version 1.0.0</h3>
+          <p>Bản cloud hoàn toàn mới so với trước đây</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/jyawby0wmelznam/Ara-Cloud(version-1.0.0).apk/file"><span> Cài đặt</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="hack" class="tab-pane">
+      <h2>Hack Roblox</h2>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhp6kvwg-v-u1_IxcxNVP34FvhtV0CH1H5PS7ffGjG6sVfKdW0t05ileA4AqppXMNcsOWgYKxV3uaLa5YR0uSm5TzeVYZ8hDydoItcAFR04MypNtyTHKFKORhvZH7msKrOGTK6Euk3K7WGoEYockXixqoB9lenQw-Wk-h8JzkGYb0EQu-18SFI9LD1VLi4/s600/1000085831.png" alt="Hack App 1">
+        <div>
+          <h3>Delta X[NEW]</h3>
+          <p>Phiên bản V2.688-Anti ban</p>
+          <p>Update:10/9/2025</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/mcqp8tu7lxe1e0r/Delta+X[V2.688]+BY+DANH.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD8CEmeB6FEGRzxwFzeXZvIhdCia6A3cLPbG_CDYtsRA&s" alt="Hack App 2">
+        <div>
+          <h3>Fluxus</h3>
+          <p>Phiên bản V2.685-Anti ban</p>
+          <p>Trạng Thái 🔵</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/wkiqk8svbz9pmar/Fluxus.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi2yudl6-PJqHOX9wiUGJb46oZ_4GMKnWH4o0YWAmAdRB4RVBdbDQO7wyJMTMLOh5lkvr_mHI2PJF4qyoNC1TmGLG0ewxN8yVWiQ3oyS2yeq2f3m2Er7HDqsBgeNY6PnzBrtuvDs2Q6Nycva8Mrvcq9ez-1vdNRwewYnqcnTDVNYmROrbwx2hCOOEgLajA/s225/1000088323.png" alt="Hack App 2">
+        <div>
+          <h3>Krnl</h3>
+          <p>Phiên bản V2.687-Anti ban</p>
+          <p>Trạng Thái 🔵</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/9ig337ekr8wqtxv/Krnl_V2.687.816_Cloud.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/dtTTd69.png" alt="Hack App 2">
+        <div>
+          <h3>Arceus X</h3>
+          <p>Phiên bản V1.7.7-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/spsx58bwb95bh7v/Roblox_Arceus_X_NEO_1.7.7.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/EPAAM3G.png" alt="Hack App 2">
+        <div>
+          <h3>Code X[NEW]</h3>
+          <p>Phiên bản V2.688-Anti ban</p>
+          <p>10/9/2025</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/oo8xnpuil9b654l/Codex+[V2.688]+BY+DANH.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/EInDQBN.png" alt="Hack App 2">
+        <div>
+          <h3>Trigon No key(NEW)</h3>
+          <p>Phiên bản V2.686-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/2r0w2mi05xy4u4f/Trigon_2.686.866_Cloud.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHvOWqR2JPqDuFKxtZnxURQXFMcnBWWROxTkCMLmEBtUeXDuqVi-9MC0WbK258A3wPf9YvAhS7eWRssGUQI8MuhgDciU9Xk_pSiiB1Y8_i9JRvE8GwlQqf-CBYKv5g-N48CQ4q_dxK-LEnD2BNm7rwm4V9gzTWE7CxjH3R-vkpGXointI-cRVwK9rDogQ/s1080/1000089599.png" alt="Hack App 2">
+        <div>
+          <h3>Ronix</h3>
+          <p>Phiên bản V2.684-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/lzue638cucmc53o/Ronix_V2.682_Cloud.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <h2>Hack Roblox-VNG</h2>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhp6kvwg-v-u1_IxcxNVP34FvhtV0CH1H5PS7ffGjG6sVfKdW0t05ileA4AqppXMNcsOWgYKxV3uaLa5YR0uSm5TzeVYZ8hDydoItcAFR04MypNtyTHKFKORhvZH7msKrOGTK6Euk3K7WGoEYockXixqoB9lenQw-Wk-h8JzkGYb0EQu-18SFI9LD1VLi4/s600/1000085831.png" alt="Hack App 2">
+        <div>
+          <h3>Delta X VNG[NEW]</h3>
+          <p>Phiên bản V2.688-Anti ban</p>
+          <p>Update:10/9/2025</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/ki37ue7d2qav2ey/Delta+X+VNG[V2.688]+BY+DANH.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJf9lLSNVJfoyI17avf-FwNwlh7dMNDpFot26wv1luS2gxtBArc0WDKRMznZ-0UCF_cD78QPbmeOe__S5x8AgWyTKwwjEMQIYMJp3fAeCldtn4g3Ray-7NRf4_8X3CunZVY8Y2fgbwLcJln6gla7ikNAbLuh1a8Oz4e16lknfvm3YJhPTU0VDTFRRT7-hr/s1080/Picsart_25-04-19_00-44-22-555.jpg" alt="Hack App 2">
+        <div>
+          <h3>Fluxus VNG</h3>
+          <p>Phiên bản V2.685-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/vw764mcr64lndlt/Fluxus_Vng-2.685.797_Up.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-v7kazgPKDIuP_bmHsn5l-wwSo7uYYFPzrP1ve-MK8hKIPrHOPi-X6PXDCkycEIXCPuxxvVv9RgugBbUcwcreiRNFnhkHisg_ybON00-cdEVnxhwKG9DvkQLPFdFIo5zUQLTyrTQ4Nk6v0-vAfwy8qnsNeXm1HURA5PagYvGhIIFXe5QgBVdcko20tfew/s4096/InCollage_20250419_023147623.jpg" alt="Hack App 2">
+        <div>
+          <h3>Arceus VNG</h3>
+          <p>Phiên bản V1.7.1-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/cf5xm2qg5l3u309/Roblox_-_VNG_Arceus_X_NEO_1.7.1.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVKM_fDcOJCfqOqfMIEycrOdKWRCsm6zOe-DXhaz1TfWKQ-Oy2KcDIqxOcc5gHkQJU1EIqhd7-O1R3ytX3dpT7kcOUQit0x35y_DNTaYlb28HgsbsQLBXbC31GigS58N0101YN-Lr_ei8EjPPjyeqg-iqzl_Ire0cXAzZ9UB1OFcHc-0nzL55IADm263oK/s1082/InCollage_20250419_012425221.jpg" alt="Hack App 2">
+        <div>
+          <h3>Krnl VNG[NEW]</h3>
+          <p>Phiên bản V2.689-Anti ban</p>
+          <p>Update:10/9/2025</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/e8kd90r3647l9g6/Krnl+X+VNG+[V2.689]+BY+DANH.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiOdMCeugcIwcoHZ_Pt401qLjX-IJ7R9WmcwyJXeVxD9kXTyLHuJpsNuvt781v3yZbsUCT5fVlFZ6l6bcYDIxpbNJlmcLSEZeLOETFN3wnlpeDpsY8eI1t2wPqaa7TnCgAOyk_uFtL7X2ixgkyz0pMdCRTMpOQlCk5zg-sAZLKW8wWh8VAlKzibyeKF3s-K/s4096/InCollage_20250419_154357243.jpg" alt="Hack App 2">
+        <div>
+          <h3>Code X VNG</h3>
+          <p>Phiên bản V2.680-Anti ban</p>
+          <p>Trạng Thái 🔴</p>
+          <a class="btn-download" href="https://www.mediafire.com/file/r579c2u6g2rgh0l/Codex_v2.680.apk/file" target="_blank"> Tải ngay</a>
+        </div>
+      </div>
+      <h4>Admin sẽ cập nhật hack mới nhất ở đây nhé!</h4>
+    </div>
+
+    <div id="updates" class="tab-pane updates">
+      <h2>Cập Nhật Mới Nhất</h2>
+      <div class="update"><strong>Phiên bản 1.0</strong> - Thêm nhiều app ngon, không lỗi .</div>
+      <div class="update"><strong>Phiên bản 2.0</strong> - Tối ưu giao diện vip như one tap,xoá bỏ các app lỗi, thêm nhiều app vpn,thêm tính năng đăng nhập.</div>
+      <div class="update"><strong>Phiên bản 2.1</strong> - Xoá các app lỗi như các game pro.</div>
+    </div>
+
+   <div id="thongbao" class="tab-pane thongbao">
+      <h2>Thông báo từ Website</h2>
+      <div class="update"><strong>10/9/2025</strong>•Rất tiết nhưng hiện tại hơn 60 game vpn trong cloud đã bị lỗi vpn tôi sẽ cố gắng tìm ra vpn không bị lỗi để cho các bạn có trải nghiệm tốt nhất!.</div>
+      <div class="update"><strong>10/9/2025</strong>•Đã cập nhật vài bản hack mới trong tab Hack Roblox.</div>
+    </div>
+
+    <div id="note" class="tab-pane">
+      <h2>Gửi văn bản & Sao chép</h2>
+      <iframe src="https://notevn.com"></iframe>
+      <p>Hướng dẫn: Nhập nội dung bạn muốn lưu vào khung, đặt tên cho ghi chú rồi nhấn "Lưu" để chuyển vào cloud. Để mở lại, truy cập notevn.com và nhập tên ghi chú đã đặt — nội dung sẽ hiển thị.</p>
+    </div>
+  
+   <div id="script" class="tab-pane">
+   <h1>Tổng Script : 112⬇️<h1>
+  <h2><img src="https://yt3.googleusercontent.com/4nTmnHkRewGVwyDZjP2VIUTLqI4X56WW-jYHFmlVzQHzMf98WkHg7oZ9rwCP7PONbzE9WwwFmQ=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Turbo Lite</h2>
+  <h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script1" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/refs/heads/main/Main.lua"))()</textarea>
+    <button onclick="copyScript('script1')">📋 Sao chép</button>
+  </div>
+
+  <h2><img src="https://yt3.googleusercontent.com/4nTmnHkRewGVwyDZjP2VIUTLqI4X56WW-jYHFmlVzQHzMf98WkHg7oZ9rwCP7PONbzE9WwwFmQ=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Turbo Lite nhặt trái</h2>
+  <h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script2" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/refs/heads/main/TraiCay.lua"))()</textarea>
+    <button onclick="copyScript('script2')">📋 Sao chép</button>
+  </div>
+
+  <h2><img src="https://yt3.googleusercontent.com/4nTmnHkRewGVwyDZjP2VIUTLqI4X56WW-jYHFmlVzQHzMf98WkHg7oZ9rwCP7PONbzE9WwwFmQ=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Turbo Lite Fix lag</h2>
+  <h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script3" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()</textarea>
+    <button onclick="copyScript('script3')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://yt3.googleusercontent.com/4nTmnHkRewGVwyDZjP2VIUTLqI4X56WW-jYHFmlVzQHzMf98WkHg7oZ9rwCP7PONbzE9WwwFmQ=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Turbo Lite Fly</h2>
+ <h3>Game➡️❓❓❓<h3>
+  <div class="script-box">
+    <textarea id="script4" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/refs/heads/main/Fly.lua"))()</textarea>
+    <button onclick="copyScript('script4')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://redzhubscripts.com/wp-content/uploads/2024/12/Redz-Hub-Logo.jpg" class="icon-script"> Script: Redz Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script5" readonly>local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)</textarea>
+    <button onclick="copyScript('script5')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG5yE8l6tCZ_jNT6FiFpNX3dfJHUnW_Uzj6A&s" class="icon-script"> Script: W-azure</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script6" readonly>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()</textarea>
+    <button onclick="copyScript('script6')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://yt3.googleusercontent.com/EB4n3O77Ez4Uu3KCR8OUmKD_XAHKNYeK03N0qDdhpN39z_YOf_WK8nODifjTax0E3Sp7m3l1Fg=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Đạt THG V2</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script7" readonly>getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/DatThg/refs/heads/main/DatThgV2"))()</textarea>
+    <button onclick="copyScript('script7')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/tSIuXakFpQY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAzTZttzPezxZV-l0esFG7-KPsReA" class="icon-script"> Script: Blue X Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script8" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()</textarea>
+    <button onclick="copyScript('script8')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9OcSZtFL6xjTzTEotJPsdUhr-jr93YWKnig&s" class="icon-script"> Script: Banana Cat Fake</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script9" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/kimprobloxdz/Banana-Free/refs/heads/main/Protected_5609200582002947.lua.txt"))()</textarea>
+    <button onclick="copyScript('script9')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdAIvIMzA5KXLhBqsnhM08iHhyc_17ax1GSQ&s" class="icon-script"> Script: Maru Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script10" readonly>getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()</textarea>
+    <button onclick="copyScript('script10')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=492,fit=crop/m6Lq6GkJxMT4WM7b/copy-of-copy-of-copy-of-salinan-dari-copy-of-copy-of-zee_20250802_204648_0000-dOqDovQlvqI3eBzo.png" class="icon-script"> Script: Than Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script11" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()</textarea>
+    <button onclick="copyScript('script11')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yMrjDPcoxDqH1gdW4zpU_KLfmp0V2kZ5VA&s" class="icon-script"> Script: AnDepZai Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script12" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/h6hbii/AnDepZaiHub/refs/heads/main/AndepzaiHub.lua"))()</textarea>
+    <button onclick="copyScript('script12')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jZ8sQroZAExxaFjQ8NQoIuKw0gggqGACS5ji8tMOhg&s" class="icon-script"> Script: Tổng Hợp</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script13" readonly>loadstring(game:HttpGet("https://isnahamzahpastebin.tech/loader/isna_scripthub_30"))()</textarea>
+    <button onclick="copyScript('script13')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2jZ8sQroZAExxaFjQ8NQoIuKw0gggqGACS5ji8tMOhg&s" class="icon-script"> Script: Stuckez Tổng Hợp</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script14" readonly>repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/stuckez999/main/refs/heads/main/tonghoproblox.lua"))()</textarea>
+    <button onclick="copyScript('script14')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDkwPAboOHtMC4GK2fyS3N2_NGZ6j_sSexuQ&s" class="icon-script"> Script: Zinner Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script15" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/HoangNguyenk8/Roblox/refs/heads/main/BF-Main.luau"))()</textarea>
+    <button onclick="copyScript('script15')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/_p_nVX0nx3k/maxresdefault.jpg" class="icon-script"> Script: Volcano Hub V3</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script16" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/indexeduu/BF-NewVer/refs/heads/main/V3New.lua"))()</textarea>
+    <button onclick="copyScript('script16')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://torascripts.org/wp-content/uploads/2025/05/Dead-Rails-kicia-hook-script.png" class="icon-script"> Script: Kiciahook V2</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script17" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.luau"))()</textarea>
+    <button onclick="copyScript('script17')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min  Gaming</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script18" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/MinGamingHubNew/RealMinGaming/refs/heads/main/MinGaminvHubBloxFruits.lua"))()</textarea>
+    <button onclick="copyScript('script18')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Bonds Collection</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script19" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/HeadHarse/Dusty/refs/heads/main/BondsFarmUpdated.txt"))()</textarea>
+    <button onclick="copyScript('script19')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://scriptblox.com/images/script/9716920-1742101039636.png" class="icon-script"> Script: Quantum Onyx</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script20" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()</textarea>
+    <button onclick="copyScript('script20')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrDZ_l1PLUv2NRUvYB_kMXPaE8Ed5uDKR2eQ&s" class="icon-script"> Script: Teddy [Premium]</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script21" readonly>repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))()</textarea>
+    <button onclick="copyScript('script21')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS97DCKu2uD5ZJYeZb3M0kPOiOcqp4zXFlh9w&s" class="icon-script"> Script: Nat Hub Auto Bond</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script22" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ArdyBotzz/NatHub/refs/heads/master/NatHub.lua"))()</textarea>
+    <button onclick="copyScript('script22')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Moon Auto Bond V3</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script23" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/m00ndiety/OP-AUTO-BONDS-V3/refs/heads/main/Keyless-BONDS-v3"))()</textarea>
+    <button onclick="copyScript('script23')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Collected Bonds</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script24" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/SevenIsYouScripts/Main/refs/heads/main/Auto%20Bonds%20Script"))()</textarea>
+    <button onclick="copyScript('script24')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/OIvjJpseMUM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiFjABWVre7rFJyY1RZU8wcWXvVg" class="icon-script"> Script: Lion Hub Hop Boss</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script25" readonly>getgenv().Mode = "name boss" -- rip_indra, Dough King, Pull Lever, TOTS, Darkbeard
+getgenv().Team = "Marines"
+repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f0952c4a5f3db9e01f4dbd099c1f9b3c.lua"))()</textarea>
+    <button onclick="copyScript('script25')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min Hub 2</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script26" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinA1Eng"))()</textarea>
+    <button onclick="copyScript('script26')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTKZitJng6eD19fCV0M_wSk6Yd84_uXO1TSQ&s" class="icon-script"> Script: Muxus Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script27" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/MuxusTL/BloxFruits/main/MuxusHub.lua"))()</textarea>
+    <button onclick="copyScript('script27')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Auto Bond Gui V2</h2>
+<h3>Game➡️ Dead Rail <h3>
+  <div class="script-box">
+    <textarea id="script28" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/DonjoScripts/Public-Scripts/refs/heads/Slap-Battles/TheFastestBondStealer.lua"))()</textarea>
+    <button onclick="copyScript('script28')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Buff Vàng Bond</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script29" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBeLike/Tera-The-Scripter-Deadrails/refs/heads/main/DUPE%20BOND%2CGOLD%2CAMMO"))()</textarea>
+    <button onclick="copyScript('script29')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://yt3.googleusercontent.com/ytc/AIdro_m4A9nIZRlaXbYSYndyPn-NltCApVeBbZJTEz4lf7zrSA=s900-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Ghost Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script30" readonly>loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-GhostHub-Universal-Games-25151"))()</textarea>
+    <button onclick="copyScript('script30')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/mtHnEd2HADM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCF2l1ymyBGQHx46comq16pmqerJA" class="icon-script"> Script: Lion Auto Bounty</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script31" readonly>loadstring(game:HttpGet("https://pastefy.app/l1siGJS1/raw"))()</textarea>
+    <button onclick="copyScript('script31')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Rolls Rocye Blox</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script32" readonly>getgenv().Team = "Pirates"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RealMatsune/Rolls-Rocye/refs/heads/main/Loading.lua"))() </textarea>
+    <button onclick="copyScript('script32')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Ringta Dead Rail</h2>
+<h3>Game➡️ Dead Rail <h3>
+  <div class="script-box">
+    <textarea id="script33" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/deadrailsui.github.io/refs/heads/main/RINGTA.LUA"))()</textarea>
+    <button onclick="copyScript('script33')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRJFzdAa8LVQVbSt1CvFhze297Hd7jVmrWEw&s" class="icon-script"> Script: Hiru Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script34" readonly>getgenv().Team = "Pirates"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaStupid/Source/main/HiruHubVeriV2.lua"))()</textarea>
+    <button onclick="copyScript('script34')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min Gaming 3</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script35" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinGamingDVn"))()</textarea>
+    <button onclick="copyScript('script35')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: TN Hub Auto Bond</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script36" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/thiennrb7/Script/refs/heads/main/autobond"))()</textarea>
+    <button onclick="copyScript('script36')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Dead Rail Open/Close</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script37" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/JonasThePogi/DeadRails/refs/heads/main/newloadstring"))()</textarea>
+    <button onclick="copyScript('script37')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdAIvIMzA5KXLhBqsnhM08iHhyc_17ax1GSQ&s" class="icon-script"> Script: Maru Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script38" readonly>getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/MaruHub"))()</textarea>
+    <button onclick="copyScript('script38')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Cáo Hub Dead Rail</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script39" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/DeadRails_BypassTp_Castle.lua"))()</textarea>
+    <button onclick="copyScript('script39')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Dead Rail Teleport Tesla</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script40" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ringtaa/tptotesla.github.io/refs/heads/main/Tptotesla.lua"))()</textarea>
+    <button onclick="copyScript('script40')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Dead Rail Mở Khóa Ngựa</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script41" readonly>loadstring(game: HttpGet("https://pastebin.com/raw/5nu3ni6D"))()</textarea>
+    <button onclick="copyScript('script41')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Anti Cheat Dead Rail</h2>
+<h3>Game➡️ Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script42" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/AmareScripts/DeadRails/refs/heads/main/Bypass%25AntiCheat.lua"))()</textarea>
+    <button onclick="copyScript('script42')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Vehicle Fly Gui</h2>
+<h3>Game➡️❓❓❓<h3>
+  <div class="script-box">
+    <textarea id="script43" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Vehicle%20Fly%20Gui"))()</textarea>
+    <button onclick="copyScript('script43')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Arise Crossover</h2>
+<h3>Game➡️Arise<h3>
+  <div class="script-box">
+    <textarea id="script44" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhangJunZ84/twvz/refs/heads/main/arisecrossover.lua"))()</textarea>
+    <button onclick="copyScript('script44')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Tbao Hub Dead Rail</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script45" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/refs/heads/main/TbaoHubDeadRails"))()</textarea>
+    <button onclick="copyScript('script45')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Tbao Hub Auto Bond</h2>
+<h3>Game➡️Dead Rail<h3>
+  <div class="script-box">
+    <textarea id="script46" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubDeadRailsFarm"))()</textarea>
+    <button onclick="copyScript('script46')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZm7dVqyS4xz2dNAXj-95sLmjg3VWRuYDAhQ&s" class="icon-script"> Script: Đạt THG V1</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script47" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/DatThg/refs/heads/main/DatThgV1"))()</textarea>
+    <button onclick="copyScript('script47')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Tbao Hub Blue Lock</h2>
+<h3>Game➡️Blue Lock Rivals<h3>
+  <div class="script-box">
+    <textarea id="script48" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()</textarea>
+    <button onclick="copyScript('script48')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Tbao Hub Evade</h2>
+<h3>Game➡️Evade<h3>
+  <div class="script-box">
+    <textarea id="script48" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubEvade"))()</textarea>
+    <button onclick="copyScript('script48')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1aIgWQ4lNy4ImE6ilxse7t5G9t3CkhtX4Mg&s" class="icon-script"> Script: KimP Roblox V3</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script49" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/KimP/refs/heads/main/KimPRobloxV3"))()</textarea>
+    <button onclick="copyScript('script49')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://cheatermad.com/wp-content/uploads/2023/11/BLOX-FRUIT-SCRIPT-RELZ-HUB-_-AUTO-RAID-RACE-V4-Roblox-id-8-27-screenshot-kopya.png" class="icon-script"> Script: Relz Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script50" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/farghii/relzhub/refs/heads/main/v2.bloxfruits.lua"))()</textarea>
+    <button onclick="copyScript('script50')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: ELGATO Hub Arise</h2>
+<h3>Game➡️Arise<h3>
+  <div class="script-box">
+    <textarea id="script51" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/meobeo8/elgato/a/Loader"))()</textarea>
+    <button onclick="copyScript('script51')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/FjkGlempvME/maxresdefault.jpg" class="icon-script"> Script: Speed X Arise</h2>
+<h3>Game➡️Arise<h3>
+  <div class="script-box">
+    <textarea id="script52" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()</textarea>
+    <button onclick="copyScript('script52')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/CwtKuzUoFEU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGnYWuH_wAxNi9s4bTyhXgtTpdfQ" class="icon-script"> Script: Lion Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script53" readonly>repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().team = "Pirates" -- Marines
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e0c7fcf6c077fc23475cf4ce4db58e42.lua"))()</textarea>
+    <button onclick="copyScript('script53')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6HA4wobdSuXsNiDwfgrfTbrDqIkw_3cTsCw&s" class="icon-script"> Script: Matsune Auto Bounty</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script54" readonly>loadstring(game:HttpGet("https://pastefy.app/Zi8pMGCq/raw"))()</textarea>
+    <button onclick="copyScript('script54')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAfwUgdWXVN8AFXPlbf3q0--c7NdeWl7_txQ&s" class="icon-script"> Script: Rubu V3</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script55" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/RubuRoblox/refs/heads/main/RubuBF"))()</textarea>
+    <button onclick="copyScript('script55')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Fisch Câu Nhanh</h2>
+<h3>Game➡️ Fisch<h3>
+  <div class="script-box">
+    <textarea id="script56" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()</textarea>
+    <button onclick="copyScript('script56')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Cuttay Hub Free</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script57" readonly>loadstring(game:HttpGet('https://github.com/diemquy/CutTayHub/blob/main/Cuttayhubreal.lua'))()</textarea>
+    <button onclick="copyScript('script57')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/Mvp_Loh4Qso/maxresdefault.jpg" class="icon-script"> Script: Teddy Hop Premium</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script58" readonly>loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletgojo/Haidepzai/refs/heads/main/Teddy-Premium"))()</textarea>
+    <button onclick="copyScript('script58')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min Hop Sword</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script59" readonly>loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinHopSword"))()</textarea>
+    <button onclick="copyScript('script59')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRJFzdAa8LVQVbSt1CvFhze297Hd7jVmrWEw&s" class="icon-script"> Script: Hiru Premium</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script60" readonly>loadstring(game:HttpGet("getgenv().Team = "Pirates"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NGUYENVUDUY1/Source/main/HiruHub.lua"))()</textarea>
+    <button onclick="copyScript('script60')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min Hop Boss</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script61" readonly>loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinHopBoss"))()</textarea>
+    <button onclick="copyScript('script61')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtiNyW-HG_4ufN-pfClW65UBtuvedZQu6w6Q&s" class="icon-script"> Script: Trẩu Roblox</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script62" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/TrauHub/refs/heads/main/TrauAp1"))()</textarea>
+    <button onclick="copyScript('script62')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFN77za0cLZIxrI2CLt5cQiXVsMbYehOCAw&s" class="icon-script"> Script: Min X Redz</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script63" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinCE"))()</textarea>
+    <button onclick="copyScript('script63')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Ace AimLock</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script64" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Totocoems/Ace/main/Ace"))()</textarea>
+    <button onclick="copyScript('script64')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjSSHVNTKLqvdaOuAUyxOSYYLRXInIe-Qvrw&s" class="icon-script"> Script: Zush Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script65" readonly>getgenv().Language = "Vietnamese"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/stuckez999/main/refs/heads/main/zushhubv2.txt"))()</textarea>
+    <button onclick="copyScript('script65')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://vxezehubscript.com/wp-content/uploads/2025/08/image6-1024x469.webp" class="icon-script"> Script: Vxeze Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script66" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Dex-Bear/Vxezehub/refs/heads/main/Skidlamcho.txt"))()</textarea>
+    <button onclick="copyScript('script66')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/5vDvQd-aC3Y/maxresdefault.jpg" class="icon-script"> Script: Frostware</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script67" readonly>loadstring(game:HttpGet("https://frostware.onrender.com/fw"))()</textarea>
+    <button onclick="copyScript('script67')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7MoiUEU5QeiXXMn_d0Fb4o5zM3-9GuRf-0w&s" class="icon-script"> Script: Tsuo Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script68" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Tsuo7/TsuoHub/main/Tsuoscripts"))()</textarea>
+    <button onclick="copyScript('script68')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/3hAdU-tibZc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpqZiEc0enEuEG14gGcDQ5IzABxQ" class="icon-script"> Script: Astral Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script69" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Overgustx2/Main/refs/heads/main/BloxFruits_25.html"))()</textarea>
+    <button onclick="copyScript('script69')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJDojOL-scRZJo08d1zMGbJJ46y6M68siGBg&s" class="icon-script"> Script: Ronix Hub</h2>
+<h3>Game➡️❓❓❓<h3>
+  <div class="script-box">
+    <textarea id="script70" readonly>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/513ccdb3ae8a61d4d7698fc337e5256d.lua"))()</textarea>
+    <button onclick="copyScript('script70')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/GLuVcVH6foQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBCSaSITIqtz7kVkeWR6_O2tgL8hg" class="icon-script"> Script: Strix Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script71" readonly>loadstring(game:HttpGet("https://scriptroblox.onrender.com/strix"))()</textarea>
+    <button onclick="copyScript('script71')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/U77KdzElvC4/maxresdefault.jpg" class="icon-script"> Script: Doremon</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script72" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf"))()</textarea>
+    <button onclick="copyScript('script72')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://yt3.googleusercontent.com/BdS5MCW5FFSRsUB7I5HCSgpFD_s6pQUhXDoVYuwzrAHrAjmzAId6elX9tWdYO35rzjFte2Y0=s160-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Zis Roblox</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script73" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/Zis/refs/heads/main/ZisRb3"))()</textarea>
+    <button onclick="copyScript('script73')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWxPLtAk21AxF94bmYBo2nUAkQgNHmAZYnQ&s" class="icon-script"> Script: Quantum Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script74" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Trustmenotcondom/QTONYX/refs/heads/main/QuantumOnyx.lua"))()</textarea>
+    <button onclick="copyScript('script74')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/PA_zp4HKbj4/sddefault.jpg" class="icon-script"> Script: AnDepZai V2</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script75" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/AnDepZaiHub/AnDepZaiHubBeta/refs/heads/main/AnDepZaiHubNewUpdated.lua"))()</textarea>
+    <button onclick="copyScript('script75')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/nDq6GejLB7U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiZC5L_Eau-i-pLWweZiyZPMEB3A" class="icon-script"> Script: BapRed Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script76" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/BapRed/main/BapRedHub"))()</textarea>
+    <button onclick="copyScript('script76')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://krnl.vip/wp-content/uploads/2023/10/Ganteng-Hub-Blox-Fruits-Mobile-2.png" class="icon-script"> Script: Ganteng Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script77" readonly>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/516a5669fc39b4945cd0609a08264505.lua"))()</textarea>
+    <button onclick="copyScript('script77')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/FjkGlempvME/maxresdefault.jpg" class="icon-script"> Script: Speed Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script78" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()</textarea>
+    <button onclick="copyScript('script78')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/w0IchvMz7GY/sddefault.jpg" class="icon-script"> Script: Fisch Bonk</h2>
+<h3>Game➡️Fisch<h3>
+  <div class="script-box">
+    <textarea id="script79" readonly>loadstring(game:HttpGet("https://bonkhubloader.netlify.app"))()</textarea>
+    <button onclick="copyScript('script79')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/lqhHVKta0mM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0B2r06yGZV1tE4bylZOSbOiY6Ew" class="icon-script"> Script: Xero Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script80" readonly>getgenv().Team = "Marines"
+getgenv().Hide_Menu = false
+getgenv().Auto_Execute = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/main.lua"))()</textarea>
+    <button onclick="copyScript('script80')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/A5BGsU_Mkkw/sddefault.jpg" class="icon-script"> Script: Cokka Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script81" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/UserDevEthical/Loadstring/main/CokkaHub.lua"))()</textarea>
+    <button onclick="copyScript('script81')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/ze2mxKs0VY0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBZRe8-2Bxv2esigeAiXRSHQkYdrA" class="icon-script"> Script: Monster Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script82" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/giahuy2511-coder/MonsterHub/refs/heads/main/MonsterHub"))()</textarea>
+    <button onclick="copyScript('script82')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://i.ytimg.com/vi/eiuCCMxC8dI/hqdefault.jpg" class="icon-script"> Script: Văn Thành Hub</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script83" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/VanThanhIOS/OniiChanVanThanhIOS/refs/heads/main/VanThanhIOS2027Online"))()</textarea>
+    <button onclick="copyScript('script83')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://yt3.googleusercontent.com/xOEf53N251rehNeQCnar1gSV_qHCDgpTm0FmxQ6fBo2B5izAaKUJ6a-7n2lbZ0awWIH3RHMMTmk=s900-c-k-c0x00ffffff-no-rj" class="icon-script"> Script: Tboy Roblox - Tổng Hợp</h2>
+<h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script84" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/TBoyRoblox727/tboyroblox/refs/heads/main/AllScriptFix.lua"))()</textarea>
+    <button onclick="copyScript('script84')">📋 Sao chép</button>
+  </div>
+
+ <h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: ThundeZ Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script85" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua"))()</textarea>
+    <button onclick="copyScript('script85')">📋 Sao chép</button>
+  </div>
+
+ <h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Auto Tự Động Chơi</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script86" readonly>loadstring(game:HttpGet("https://pastefy.app/OT23uo9U/raw"))()</textarea>
+    <button onclick="copyScript('script86')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Speed Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script87" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()</textarea>
+    <button onclick="copyScript('script87')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Nat Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script88" readonly>loadstring(game:HttpGet("https://get.nathub.xyz/loader"))()</textarea>
+    <button onclick="copyScript('script88')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: OMG Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script89" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()</textarea>
+    <button onclick="copyScript('script89')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Lumin Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script90" readonly>loadstring(game:HttpGet("https://lumin-hub.lol/loader.lua"))()</textarea>
+    <button onclick="copyScript('script90')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Ransom Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script91" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/imFiftyyOne/RansomHub/refs/heads/main/Gag"))()</textarea>
+    <button onclick="copyScript('script91')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: No-Lag V2 Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script92" readonly>loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()</textarea>
+    <button onclick="copyScript('script92')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: No-Lag V1 Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script93" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Loader/LoaderV1.lua"))()</textarea>
+    <button onclick="copyScript('script93')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Moma Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script94" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/n3xkxp3rl/Moma-Hub/refs/heads/main/GrowAGarden.lua"))()</textarea>
+    <button onclick="copyScript('script94')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: PhantFluxReal</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script95" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/sudaisontopxd/PanScriptXSudaisScript/refs/heads/main/PhantFluxReal.lua"))()</textarea>
+    <button onclick="copyScript('script95')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Kura Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script96" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/checkurasshole/Script/refs/heads/main/IQ"))()</textarea>
+    <button onclick="copyScript('script96')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Tora Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script97" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/GrowaGarden"))()</textarea>
+    <button onclick="copyScript('script97')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Lion Hub Kaitun</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script98" readonly>loadstring(game:HttpGet("https://pastefy.app/KAZUgCRO/raw"))()</textarea>
+    <button onclick="copyScript('script98')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: AVOnTop</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script99" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Ayvathion/AV-On-Top/refs/heads/main/Loader.lua"))()</textarea>
+    <button onclick="copyScript('script99')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Tbao Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script100" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubGrowGarden"))()</textarea>
+    <button onclick="copyScript('script100')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Y Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script101" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/yue-os/script/refs/heads/main/Y-Hub"))()</textarea>
+    <button onclick="copyScript('script101')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Galactic Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script102" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticScripts/Galactic-Hub/refs/heads/main/Galactic%20Hub"))()</textarea>
+    <button onclick="copyScript('script102')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Beecon Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script103" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub"))()</textarea>
+    <button onclick="copyScript('script103')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Kenniel Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script104" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/Grow-a-garden/refs/heads/main/Grow%20A%20Garden"))()</textarea>
+    <button onclick="copyScript('script104')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Gag Dupe Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script105" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/Bern0va/Scripts/refs/heads/main/gag-dupe.lua"))()</textarea>
+    <button onclick="copyScript('script105')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Blue Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script106" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/tesghg/Grow-a-Garden/main/ameicaa_Grow_A_Garden.lua"))()</textarea>
+    <button onclick="copyScript('script106')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Nicuse Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script107" readonly>loadstring(game:HttpGet("https://nicuse.xyz/MainHub.lua"))()</textarea>
+    <button onclick="copyScript('script107')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Alchemy Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script108" readonly>loadstring(game:HttpGet("https://scripts.alchemyhub.xyz"))()</textarea>
+    <button onclick="copyScript('script108')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: Grow A Garden V0.71</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script109" readonly>loadstring(game:HttpGet("https://lunor.dev/loader"))()</textarea>
+    <button onclick="copyScript('script109')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTRX5PCeMli1F8GE_XQl5izVhCkOPE60P1xA&s" class="icon-script"> Script: H4xScr Hub</h2>
+ <h3>Game➡️Grow A Graden<h3>
+  <div class="script-box">
+    <textarea id="script110" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader2.lua"))()</textarea>
+    <button onclick="copyScript('script110')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: Datthg V2</h2>
+ <h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script111" readonly>getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LuaCrack/DatThg/refs/heads/main/DatThgV2"))()</textarea>
+    <button onclick="copyScript('script111')">📋 Sao chép</button>
+  </div>
+
+<h2><img src="" class="icon-script"> Script: HOHO HUB</h2>
+ <h3>Game➡️Blox Fruit<h3>
+  <div class="script-box">
+    <textarea id="script112" readonly>loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI"))()</textarea>
+    <button onclick="copyScript('script112')">📋 Sao chép</button>
+  </div>
+    </div>
+</div>
+  <div id="howtousevpn" class="tab-pane">
+      <h2>Cách sử dụng thiết bị VPN</h2>
+      <iframe src="https://drive.google.com/file/d/1CxF7ShfKWW363ROxlo6bgEFHilUY3r5a/preview"></iframe>
+      <p>Tải App VPN bên dưới</p>
+      	<div class="game-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi7uNU25dBxYev9Wkvd0lkEmwVlRtyXdcz_So3WqXO2w&s" alt="Hack App 2">
+        <div>
+        	<h3>Kiwi Vpn</h3>
+      	<a class="btn-download" href="https://www.mediafire.com/file/r579c2u6g2rgh0l/Codex_v2.680.apk/file" target="_blank"> Tải ngay vpn</a>
+      <div>
+    <div>
+      	
+
+  <footer>
+     2025 Gaming VIP. All rights reserved.
+  </footer>
+
+<script>
+function copyScript(id){
+  const textarea = document.getElementById(id);
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Đã sao chép script!");
+}
+</script>
+</body>
+</html>
+
